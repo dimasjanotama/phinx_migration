@@ -28,7 +28,7 @@ environments:
         host: localhost
         name: testing_db
         user: root
-        pass: ''
+        pass: 'password'
         port: 3306
         charset: utf8
 
