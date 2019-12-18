@@ -15,6 +15,20 @@ class UserSeeder extends AbstractSeed
      */
     public function run()
     {
-        
+        $data = [
+            [
+                'username'          => 'dimsdoms',
+                'name'              => 'dimasjanotama',
+                'phone'             => '08116644448',
+                'email'             => 'cumatest@gmail.com',
+                'birthdate'         => '1990-11-13 00:00:00',
+                'join_date'         => date('Y-m-d H:i:s'),
+                'membership'        => 'premium',
+                'total_activity'    => '0',
+            ]
+            ];
+            $posts = $this->table('users');
+            $posts->insert($data)
+                ->save();
     }
 }

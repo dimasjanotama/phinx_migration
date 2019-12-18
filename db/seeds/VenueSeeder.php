@@ -15,6 +15,18 @@ class VenueSeeder extends AbstractSeed
      */
     public function run()
     {
-
+        $data = [
+            [
+                'name'          => 'Scorpion Training Camp',
+                'address'       => 'Jalan Pulo mas Timur',
+                'about'         => 'Training Camp in Pulomas',
+                'facilities'    => 'bathroom',
+                'socialmedia'   => 'instagram',
+                'rating'        => 0,
+            ]
+            ];
+            $posts = $this->table('venue');
+            $posts->insert($data)
+                ->save();
     }
 }
