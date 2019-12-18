@@ -31,6 +31,18 @@ class ClassTable extends AbstractMigration
      */
     public function change()
     {
+        $table = $this->table('class');
+        $table->addColumn('name', 'string', ['limit' => 25])
+            ->addColumn('venue', 'string', ['limit' => 25])
+            ->addColumn('class_date', 'datetime')
+            ->addColumn('class_start', 'time')
+            ->addColumn('class_end', 'time')
+            ->addColumn('price', 'integer')
+            ->addColumn('desc', 'string', ['null' => true,'limit' => 300])
+            ->addColumn('note', 'string', ['null' => true,'limit' => 300])
+            ->addColumn('attendant', 'integer', ['null' => true])
+            ->addColumn('attendant_limit', 'integer')
+            ->create();
 
     }
 }

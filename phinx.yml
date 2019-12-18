@@ -10,16 +10,16 @@ environments:
         host: localhost
         name: production_db
         user: root
-        pass: ''
+        pass: 'password'
         port: 3306
         charset: utf8
 
     development:
         adapter: mysql
         host: localhost
-        name: development_db
+        name: phinx_dogether
         user: root
-        pass: ''
+        pass: 'password'
         port: 3306
         charset: utf8
 
