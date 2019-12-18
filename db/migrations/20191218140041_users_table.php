@@ -33,6 +33,7 @@ class UsersTable extends AbstractMigration
     {
         $table = $this->table('users');
         $table->addColumn('username', 'string', ['limit' => 15])
+            ->addColumn('password', 'string', ['limit' => 15])
             ->addColumn('name', 'string', ['limit' => 20])
             ->addColumn('phone', 'string', ['limit' => 13])
             ->addColumn('email', 'string', ['limit' => 100])
